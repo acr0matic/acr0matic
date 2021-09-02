@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// В этом файле находятся все базовые стили
+// -----------------------------------------------------------------------------
+
+html,
+body {
+  position: relative;
+  min-height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 1rem;
+}
+
+/**
+ * Наследуем всем элементам свойство border-box от родителя (html)
+ * Так как селектор * имеет 0 приоритет, он не переопределяет стили html
+ * Это нужно, чтобы в будушем была возможность без проблем переопредилить стили
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * Удаляет отступы снизу у элементов, внутри контейнера
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Разрешить растягивать текстовое поле только по вертикали
+ */
+
+textarea {
+  resize: vertical;
+}
+
+a {
+  text-decoration: none;
+  color: $text-black;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+img {
+  display: block;
+}
